@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#https://blog.martinfitzpatrick.com/add-git-branch-name-to-terminal-prompt-mac/ - Git Branch in Prompt
+
 #export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ "
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
